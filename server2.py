@@ -10,10 +10,11 @@ def index():
 
 @app.route('/ping', methods=['GET', 'POST'])
 def ping():
-    url = "http://127.0.0.1:5372/pong"
-    requests.get(url=url, data="ping")
     data = request.data
     print(data)
+    url = "http://127.0.0.1:8080/second"
+    requests.get(
+        url=url, json='{"url" : "http://127.0.0.1:4567/ping", "data" : "ping"}')
     return 'ping'
 
 
