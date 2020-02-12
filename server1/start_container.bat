@@ -1,0 +1,1 @@
+docker run --name server1_container --rm -p 127.0.0.1:4567:4567 --network=my_network server1
