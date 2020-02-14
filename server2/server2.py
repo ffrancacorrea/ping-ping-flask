@@ -12,9 +12,9 @@ def index():
 def ping():
     data = request.data
     print(data)
-    url = "http:server3_container:8080/second"
+    url = "http://127.0.0.1:8080/second"
     requests.get(
-        url=url, json='{"url" : "http://server2_container:4567/ping", "data" : "ping"}')
+        url=url, json='{"url" : "http://127.0.0.1:4567/ping", "data" : "ping"}')
     return 'ping'
 
 

@@ -12,9 +12,9 @@ def index():
 def pong():
     data = request.data
     print(data)
-    url = "http://server3_container:8080/first"
+    url = "http://127.0.0.1:8080/first"
     requests.get(
-        url=url, json='{"url" : "http://server1_container:5372/pong", "data" : "pong"}')
+        url=url, json='{"url" : "http://127.0.0.1:5372/pong", "data" : "pong"}')
     return 'pong'
 
 

@@ -22,7 +22,7 @@ def call(first_data, second_data, first_url, second_url):
     requests.get(url=str(second_url), data=str(first_data))
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index():
     return '<h1>Hello</h1>'
 
@@ -59,4 +59,4 @@ def second():
 
 
 if __name__ == '__main__':
-    app.run(debug=True,)
+    app.run(debug=True)
